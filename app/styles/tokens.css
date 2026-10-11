@@ -1,0 +1,18 @@
+/* ARCEUZ BEAUTY OS — design tokens. Tenants sobrescrevem --brand* na página pública. */
+:root {
+  --bg: #ffffff;  --surface: #f6f6f7;  --surface-2: #ececef;
+  --text: #0b0b0d; --muted: #52525b;  --border: #e4e4e7;
+  --brand: #ff6500; --brand-soft: #ff8a3d; --brand-contrast: #ffffff;
+  --radius: 12px; --ease: cubic-bezier(.2,.8,.2,1);
+  --dur-fast: 180ms; --dur-base: 260ms;
+  --status-scheduled: #3b82f6; --status-confirmed: #10b981; --status-in-service: #ff6500;
+  --status-completed: #6b7280; --status-cancelled: #ef4444; --status-no-show: #a855f7;
+}
+:root[data-theme="dark"] {
+  --bg: #0b0b0d; --surface: #151518; --surface-2: #202024;
+  --text: #ffffff; --muted: #a1a1aa; --border: #2a2a30;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
